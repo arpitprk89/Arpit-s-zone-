@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="AZ Group is a founder-led venture vision from Rajasthan, connecting ideas across retail, hospitality, logistics, technology, creative production and infrastructure.">
+  <link rel="canonical" href="https://arpitszone.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AZ GROUP — From Local Trust to Global Systems">
+  <meta property="og:description" content="A founder-led vision for connected ventures, built around trust, useful systems and long-term thinking.">
+  <meta property="og:url" content="https://arpitszone.netlify.app/">
+  <meta property="og:site_name" content="AZ GROUP">
+  <meta property="og:image" content="https://arpitszone.netlify.app/az-group-preview.jpg">
+  <meta property="og:image:secure_url" content="https://arpitszone.netlify.app/az-group-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AZ Group — From Local Trust to Global Systems">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AZ GROUP — From Local Trust to Global Systems">
+  <meta name="twitter:description" content="A founder-led vision for connected ventures, built around trust and long-term thinking.">
+  <meta name="twitter:image" content="https://arpitszone.netlify.app/az-group-preview.jpg">
+  <title>AZ GROUP — From Local Trust to Global Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #070707;
+      --black-2: #0e0e0e;
+      --black-3: #151515;
+      --white: #f5f5f2;
+      --muted: #a3a3a0;
+      --dim: #72726f;
+      --line: rgba(255,255,255,.13);
+      --line-soft: rgba(255,255,255,.075);
+      --max: 1240px;
+      --sans: 'DM Sans', Arial, sans-serif;
+      --display: 'Manrope', 'DM Sans', Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; min-width: 320px; background: var(--black); color: var(--white); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    body.locked { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { display: block; max-width: 100%; }
+    ::selection { background: #f5f5f2; color: #070707; }
+    :focus-visible { outline: 2px solid #f5f5f2; outline-offset: 4px; }
+    .container { width: min(var(--max), calc(100% - 64px)); margin-inline: auto; }
+    .eyebrow { margin: 0 0 18px; color: #c7c7c2; font-size: .72rem; font-weight: 600; letter-spacing: .17em; line-height: 1.5; text-transform: uppercase; }
+    .section { padding: 112px 0; border-top: 1px solid var(--line-soft); }
+    .section-head { display: grid; grid-template-columns: minmax(0,1fr) minmax(270px,.62fr); align-items: end; gap: 48px; margin-bottom: 48px; }
+    .section-title { max-width: 720px; margin: 0; font-family: var(--display); font-size: clamp(2.15rem, 4.2vw, 4.15rem); font-weight: 500; line-height: 1.12; letter-spacing: -.055em; }
+    .section-summary { max-width: 450px; margin: 0; color: var(--muted); font-size: .97rem; line-height: 1.85; }
+    .intro-screen { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: #050505; opacity: 1; visibility: visible; transition: opacity .72s ease, visibility .72s ease; }
+    .intro-screen::before { content: ''; position: absolute; width: min(68vw, 720px); aspect-ratio: 1; border: 1px solid rgba(255,255,255,.035); border-radius: 50%; pointer-events: none; }
+    .intro-screen::after { content: ''; position: absolute; width: min(48vw, 510px); aspect-ratio: 1; border: 1px solid rgba(255,255,255,.03); border-radius: 50%; pointer-events: none; }
+    .intro-screen.is-leaving { opacity: 0; visibility: hidden; }
+    .intro-mark { position: relative; z-index: 1; padding: 14px 25px 19px; border: 0; background: transparent; color: var(--white); cursor: pointer; font-family: var(--display); font-size: clamp(5rem, 18vw, 11rem); font-weight: 500; letter-spacing: -.105em; line-height: .95; transition: transform .35s ease, opacity .35s ease; }
+    .intro-mark:hover { transform: scale(1.035); }
+    .intro-mark:active { transform: scale(.98); }
+    .intro-mark span { display: inline-block; }
+    .intro-mark .intro-a { margin-right: .06em; }
+    .intro-mark:focus-visible { outline: 1px solid rgba(255,255,255,.8); outline-offset: 15px; }
+    .site { opacity: 0; transform: translateY(10px); transition: opacity .8s ease, transform .8s ease; }
+    .site.is-visible { opacity: 1; transform: none; }
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(7,7,7,.91); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line-soft); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .brand-mark { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid rgba(255,255,255,.55); font-family: var(--display); font-size: .95rem; font-weight: 700; letter-spacing: -.09em; }
+    .brand-name { display: flex; flex-direction: column; gap: 0; line-height: 1.15; }
+    .brand-name b { font-family: var(--display); font-size: .83rem; font-weight: 800; letter-spacing: .16em; }
+    .brand-name small { margin-top: 4px; color: var(--muted); font-size: .57rem; font-weight: 500; letter-spacing: .18em; }
+    .nav-links { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 34px); list-style: none; padding: 0; margin: 0; }
+    .nav-links a { color: #b6b6b1; font-size: .79rem; font-weight: 500; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta, .button { display: inline-flex; justify-content: center; align-items: center; gap: 12px; min-height: 45px; padding: 0 18px; border: 1px solid rgba(255,255,255,.7); background: var(--white); color: #080808; font-size: .78rem; font-weight: 700; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+    .nav-cta:hover, .button:hover { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+    .button.secondary { background: transparent; color: var(--white); border-color: var(--line); }
+    .button.secondary:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .button .arrow { font-size: 1rem; line-height: 1; }
+    .menu-toggle { display: none; padding: 8px 0 8px 12px; border: 0; background: transparent; color: var(--white); font-size: .74rem; letter-spacing: .1em; cursor: pointer; }
+    .hero { padding: 74px 0 80px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr); align-items: stretch; gap: 54px; }
+    .hero-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 20px 0 24px; }
+    .hero-kicker { display: flex; align-items: center; gap: 11px; margin-bottom: 29px; color: #c2c2bd; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+    .hero-kicker::before { content: ''; width: 30px; height: 1px; background: #f1f1ed; }
+    h1 { max-width: 690px; margin: 0; font-family: var(--display); font-size: clamp(3.25rem, 6vw, 6.1rem); font-weight: 500; line-height: 1.015; letter-spacing: -.075em; }
+    h1 span { color: #a7a7a1; }
+    .hero-copy p { max-width: 510px; margin: 27px 0 0; color: #b6b6b0; font-size: 1.02rem; line-height: 1.9; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 18px 25px; margin-top: 42px; padding-top: 20px; border-top: 1px solid var(--line); width: min(100%, 520px); }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-item b { font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .meta-item span { color: var(--dim); font-size: .7rem; }
+    .hero-visual { position: relative; min-height: 570px; overflow: hidden; background: #171717; }
+    .hero-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 48%, rgba(0,0,0,.55) 100%), linear-gradient(90deg, rgba(0,0,0,.06), transparent 55%); pointer-events: none; }
+    .visual-label { position: absolute; z-index: 1; left: 24px; right: 24px; bottom: 23px; display: flex; align-items: end; justify-content: space-between; gap: 20px; }
+    .visual-label b { font-family: var(--display); font-size: .8rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .visual-label span { color: rgba(255,255,255,.72); font-size: .72rem; text-align: right; }
+    .marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .marquee-inner { display: flex; justify-content: space-between; gap: 24px; padding: 20px 0; color: #b8b8b2; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    .marquee-inner span { white-space: nowrap; }
+    .marquee-inner span::before { content: '—'; margin-right: 13px; color: #f5f5f2; }
+    .vision-grid { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 70px; align-items: start; }
+    .vision-statement { max-width: 600px; font-family: var(--display); font-size: clamp(2.15rem, 4vw, 3.65rem); font-weight: 500; line-height: 1.18; letter-spacing: -.055em; }
+    .vision-statement span { color: #8d8d88; }
+    .vision-copy p { margin: 0 0 18px; color: var(--muted); font-size: .97rem; line-height: 1.9; }
+    .vision-copy p strong { color: var(--white); font-weight: 600; }
+    .text-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 8px; padding-bottom: 5px; border-bottom: 1px solid rgba(255,255,255,.45); font-size: .8rem; font-weight: 600; }
+    .text-link span { transition: transform .2s ease; }
+    .text-link:hover span { transform: translateX(4px); }
+    .ventures-section { background: #0b0b0b; }
+    .concept-note { display: flex; gap: 13px; align-items: start; max-width: 750px; margin-top: 28px; padding: 18px 20px; border: 1px solid var(--line-soft); color: var(--muted); font-size: .78rem; line-height: 1.75; }
+    .concept-note b { color: var(--white); white-space: nowrap; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; }
+    .venture-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .venture-card { min-height: 245px; display: flex; flex-direction: column; padding: 27px 28px 25px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: transparent; transition: background .22s ease; }
+    .venture-card:hover { background: #111; }
+    .venture-number { color: #70706b; font-size: .68rem; font-weight: 600; letter-spacing: .12em; }
+    .venture-card h3 { margin: 31px 0 9px; font-family: var(--display); font-size: 1.22rem; font-weight: 600; letter-spacing: -.03em; }
+    .venture-card p { margin: 0; color: var(--muted); font-size: .84rem; line-height: 1.8; }
+    .venture-type { margin-top: auto; padding-top: 24px; color: #999994; font-size: .63rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    .architecture { padding-bottom: 0; }
+    .architecture-visual { position: relative; min-height: 590px; overflow: hidden; background: #161616; }
+    .architecture-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 50%; }
+    .architecture-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.20) 80%), linear-gradient(0deg, rgba(0,0,0,.34), transparent 55%); }
+    .architecture-overlay { position: absolute; z-index: 1; left: clamp(25px, 5vw, 70px); bottom: clamp(28px, 5vw, 66px); max-width: 580px; }
+    .architecture-overlay .eyebrow { margin-bottom: 16px; }
+    .architecture-overlay h3 { max-width: 580px; margin: 0; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 5rem); font-weight: 500; line-height: 1.04; letter-spacing: -.06em; }
+    .architecture-overlay p { max-width: 510px; margin: 20px 0 0; color: rgba(255,255,255,.77); font-size: .93rem; line-height: 1.8; }
+    .principles-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 36px; margin-top: 35px; }
+    .principle { padding-top: 20px; border-top: 1px solid var(--line); }
+    .principle .number { color: #878781; font-size: .7rem; font-weight: 600; letter-spacing: .1em; }
+    .principle h3 { margin: 20px 0 10px; font-family: var(--display); font-size: 1.1rem; font-weight: 600; }
+    .principle p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.85; }
+    .founder-section { background: #0b0b0b; }
+    .founder-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0,1.05fr); gap: clamp(35px, 7vw, 90px); align-items: center; }
+    .founder-visual { position: relative; min-height: 545px; background: #171717; overflow: hidden; }
+    .founder-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
+    .founder-copy .eyebrow { margin-bottom: 17px; }
+    .founder-copy h2 { margin: 0; font-family: var(--display); font-size: clamp(2.6rem, 5vw, 4.75rem); font-weight: 500; line-height: 1.04; letter-spacing: -.065em; }
+    .founder-role { margin: 16px 0 25px; color: #c4c4be; font-size: .77rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    .founder-copy p { max-width: 560px; margin: 0 0 16px; color: var(--muted); font-size: .96rem; line-height: 1.9; }
+    .founder-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .founder-links a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 13px; border: 1px solid var(--line); color: #deded9; font-size: .75rem; font-weight: 600; transition: background .2s,color .2s; }
+    .founder-links a:hover { background: var(--white); color: var(--black); }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .story-card { position: relative; min-height: 420px; overflow: hidden; background: #151515; }
+    .story-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+    .story-card:hover img { transform: scale(1.025); }
+    .story-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.78), rgba(0,0,0,0) 68%); }
+    .story-caption { position: absolute; z-index: 1; left: 25px; right: 25px; bottom: 23px; }
+    .story-caption span { color: #d1d1cc; font-size: .67rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+    .story-caption h3 { margin: 8px 0 0; font-family: var(--display); font-size: 1.45rem; font-weight: 600; letter-spacing: -.035em; }
+    .contact-section { padding-bottom: 96px; }
+    .contact-panel { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,.58fr); gap: 45px; align-items: end; padding: clamp(30px, 5.8vw, 70px); border: 1px solid var(--line); background: #0c0c0c; }
+    .contact-panel h2 { max-width: 690px; margin: 0; font-family: var(--display); font-size: clamp(2.6rem, 5.5vw, 5rem); font-weight: 500; line-height: 1.05; letter-spacing: -.065em; }
+    .contact-panel p { max-width: 570px; margin: 22px 0 0; color: var(--muted); font-size: .93rem; line-height: 1.85; }
+    .contact-links { display: grid; gap: 10px; }
+    .contact-links a { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px 0; border-bottom: 1px solid var(--line); color: #d9d9d4; font-size: .82rem; }
+    .contact-links a span:last-child { color: #888883; }
+    .contact-links a:hover { color: var(--white); }
+    .brand-family { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 40px 0; border-bottom: 1px solid var(--line-soft); }
+    .brand-family p { max-width: 540px; margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.75; }
+    .brand-family img { width: 150px; max-height: 100px; object-fit: contain; flex-shrink: 0; }
+    .site-footer { padding: 25px 0 35px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; color: #858580; font-size: .68rem; }
+    .footer-inner strong { color: #cfcfc9; font-weight: 600; letter-spacing: .1em; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a:hover { color: var(--white); }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.is-in { opacity: 1; transform: none; }
+    @media (max-width: 980px) {
+      .container { width: min(var(--max), calc(100% - 44px)); }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: .73rem; }
+      .nav-cta { display: none; }
+      .hero-grid { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 30px; }
+      .hero-visual { min-height: 500px; }
+      .section { padding: 88px 0; }
+      .vision-grid { gap: 42px; }
+      .venture-card { padding: 24px 22px; }
+      .founder-visual { min-height: 475px; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 36px, var(--max)); }
+      .nav { min-height: 68px; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 12px 20px 18px; flex-direction: column; align-items: stretch; gap: 0; background: rgba(7,7,7,.98); border-bottom: 1px solid var(--line); }
+      .nav-links.is-open { display: flex; }
+      .nav-links a { display: block; padding: 12px 0; font-size: .85rem; }
+      .hero { padding: 44px 0 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-copy { padding: 17px 0 0; }
+      h1 { font-size: clamp(3.1rem, 13vw, 5.1rem); }
+      .hero-copy p { margin-top: 20px; font-size: .96rem; }
+      .hero-meta { margin-top: 28px; }
+      .hero-visual { min-height: 390px; }
+      .marquee-inner { justify-content: flex-start; overflow-x: auto; padding: 16px 0; }
+      .section { padding: 72px 0; }
+      .section-head, .vision-grid, .founder-grid, .contact-panel { grid-template-columns: 1fr; gap: 22px; }
+      .section-head { margin-bottom: 30px; }
+      .section-title { font-size: clamp(2.2rem, 10vw, 3.3rem); }
+      .section-summary { font-size: .9rem; }
+      .vision-statement { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+      .venture-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .venture-card { min-height: 235px; padding: 20px 17px; }
+      .venture-card h3 { margin-top: 25px; font-size: 1.07rem; }
+      .venture-card p { font-size: .79rem; }
+      .concept-note { flex-direction: column; gap: 6px; }
+      .architecture-visual { min-height: 430px; }
+      .principles-grid { grid-template-columns: 1fr; gap: 28px; }
+      .founder-visual { min-height: 420px; order: 2; }
+      .founder-copy { order: 1; }
+      .story-grid { grid-template-columns: 1fr; }
+      .story-card { min-height: 380px; }
+      .contact-panel { padding: 26px 22px; }
+      .contact-panel h2 { font-size: clamp(2.6rem, 10vw, 4rem); }
+      .brand-family { align-items: start; flex-direction: column; }
+      .brand-family img { width: 130px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 420px) {
+      .venture-grid { grid-template-columns: 1fr; }
+      .venture-card { min-height: 205px; }
+      .hero-actions { width: 100%; }
+      .hero-actions .button { flex: 1; padding-inline: 12px; }
+      .visual-label { left: 17px; right: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="locked">
+  <div class="intro-screen" id="intro" aria-label="AZ Group introduction">
+    <button class="intro-mark" id="enter-az" type="button" aria-label="Enter AZ Group"><span class="intro-a">A</span><span>Z</span></button>
+  </div>
+
+  <div class="site" id="site" inert>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="AZ Group home">
+          <span class="brand-mark">AZ</span>
+          <span class="brand-name"><b>AZ GROUP</b><small>FROM LOCAL TRUST TO GLOBAL SYSTEMS</small></span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU +</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#vision">Our vision</a></li>
+          <li><a href="#ventures">Ventures</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#founder">Founder</a></li>
+        </ul>
+        <a class="nav-cta" href="#contact">Connect <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="hero-kicker">Founder-led vision · Rajasthan, India</div>
+            <h1>From local trust to <span>global systems.</span></h1>
+            <p>AZ Group is a long-term vision for connected ventures—bringing together commerce, hospitality, logistics, technology, creative work and the built environment through one considered approach.</p>
+            <div class="hero-actions">
+              <a class="button" href="#vision">Explore the vision <span class="arrow" aria-hidden="true">↘</span></a>
+              <a class="button secondary" href="#founder">Meet the founder <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-meta" aria-label="AZ Group overview">
+              <div class="meta-item"><b>One connected vision</b><span>Designed as a wider system</span></div>
+              <div class="meta-item"><b>Six venture concepts</b><span>Independent, yet connected</span></div>
+              <div class="meta-item"><b>Rajasthan, India</b><span>Grounded in local context</span></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img src="az-group-building.jpg" alt="Architectural concept visual for the AZ Group ecosystem" width="1395" height="1127" fetchpriority="high">
+            <div class="visual-label"><b>AZ Group · Vision in development</b><span>Built with intent.<br>Designed for the long term.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-label="Areas of exploration">
+        <div class="container marquee-inner"><span>Retail & commerce</span><span>Hospitality</span><span>Logistics</span><span>Technology</span><span>Creative production</span><span>Infrastructure</span></div>
+      </div>
+
+      <section class="section" id="vision">
+        <div class="container vision-grid">
+          <div class="reveal">
+            <p class="eyebrow">01 / The vision</p>
+            <h2 class="vision-statement">A group should be more than a name. <span>It should be a way of connecting useful ideas.</span></h2>
+          </div>
+          <div class="vision-copy reveal">
+            <p>AZ Group starts with a straightforward question: <strong>what could become possible when different ventures are designed to work with one another?</strong></p>
+            <p>The vision is to build from local trust and practical needs, then develop clear systems, consistent service and thoughtful technology that can support responsible growth over time.</p>
+            <p>Rather than treating each idea as an isolated business, AZ Group explores how each part might create value on its own—and how the wider network might become stronger when connected.</p>
+            <a class="text-link" href="#ventures">Explore the venture concepts <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ventures-section" id="ventures">
+        <div class="container">
+          <div class="section-head reveal">
+            <div><p class="eyebrow">02 / The ecosystem</p><h2 class="section-title">Distinct directions.<br>One wider ambition.</h2></div>
+            <p class="section-summary">Six connected areas form the current AZ Group concept. Each has its own purpose, while sharing a common emphasis on trust, quality and dependable systems.</p>
+          </div>
+          <div class="venture-grid">
+            <article class="venture-card reveal"><span class="venture-number">01 / COMMERCE</span><h3>AZ Mart</h3><p>A retail concept focused on dependable local service, considered product access and a consistent customer experience.</p><span class="venture-type">Retail & commerce</span></article>
+            <article class="venture-card reveal"><span class="venture-number">02 / HOSPITALITY</span><h3>AZ Cafe</h3><p>A welcoming space concept that brings together hospitality, community and thoughtful everyday experiences.</p><span class="venture-type">Food, beverage & community</span></article>
+            <article class="venture-card reveal"><span class="venture-number">03 / MOVEMENT</span><h3>AZ Logistics</h3><p>A future-facing logistics concept built around reliable movement, coordination and clear service standards.</p><span class="venture-type">Supply & fulfilment</span></article>
+            <article class="venture-card reveal"><span class="venture-number">04 / TECHNOLOGY</span><h3>AZ DevHub</h3><p>A technology direction for digital products, automation and the systems that can connect the wider ecosystem.</p><span class="venture-type">Technology & digital systems</span></article>
+            <article class="venture-card reveal"><span class="venture-number">05 / CREATIVE</span><h3>AZ Studio</h3><p>A creative-production concept for identity, storytelling, visual communication and digital experiences.</p><span class="venture-type">Design & media</span></article>
+            <article class="venture-card reveal"><span class="venture-number">06 / PLACE</span><h3>AZ Assets</h3><p>A long-range direction exploring useful spaces, built environments and infrastructure with a systems mindset.</p><span class="venture-type">Built environment</span></article>
+          </div>
+          <div class="concept-note reveal"><b>Current stage</b><span>These are evolving venture concepts within a founder-led vision. Their inclusion describes intended direction, not a claim that every vertical is already operating as a separate business.</span></div>
+        </div>
+      </section>
+
+      <section class="section architecture" id="approach">
+        <div class="container">
+          <div class="section-head reveal">
+            <div><p class="eyebrow">03 / The approach</p><h2 class="section-title">Designed to connect.<br>Built to earn trust.</h2></div>
+            <p class="section-summary">The image below is an illustrative concept for a future hospitality and community experience within the wider vision—not a claim about a currently operating venue.</p>
+          </div>
+          <div class="architecture-visual reveal">
+            <img src="az-community-vision.jpg" alt="Illustrative concept artwork showing a future AZ Group hospitality and community setting" width="1402" height="1122" loading="lazy">
+            <div class="architecture-overlay"><p class="eyebrow">Community & experience</p><h3>Spaces that bring people together.</h3><p>Hospitality can be more than a place to spend time. It can be an opportunity to create a considered experience, encourage community and earn trust through the details.</p></div>
+          </div>
+          <div class="principles-grid">
+            <article class="principle reveal"><span class="number">01</span><h3>Local trust</h3><p>Begin with real needs, reliable relationships and service that respects the communities it serves.</p></article>
+            <article class="principle reveal"><span class="number">02</span><h3>Shared systems</h3><p>Use clear processes and useful technology to make separate ventures more coordinated and dependable.</p></article>
+            <article class="principle reveal"><span class="number">03</span><h3>Long-term thinking</h3><p>Choose foundations that can be tested, improved and expanded responsibly as the vision develops.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section founder-section" id="founder">
+        <div class="container founder-grid">
+          <div class="founder-visual reveal"><img src="az-founder-office.jpg" alt="Founder-themed concept artwork for AZ Group" width="1402" height="1122" loading="lazy"></div>
+          <div class="founder-copy reveal">
+            <p class="eyebrow">04 / Founder</p>
+            <h2>Arpit Pareek</h2>
+            <div class="founder-role">Founder · AZ Group</div>
+            <p>AZ Group is a vision I am developing around a simple belief: strong ventures are built through trust, thoughtful systems and the patience to execute well.</p>
+            <p>My role as founder is to define the direction, connect ideas that belong together, and keep refining the model—from the first question to a workable plan and, over time, to real execution.</p>
+            <p>The ambition is broad, but the principle is practical: build with intent, stay grounded, and let credibility come from the work.</p>
+            <div class="founder-links"><a href="https://www.linkedin.com/in/arpit-pareek-83b533361/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/arpitprk89" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://arpitprk89.github.io/arpit-portfolio/" target="_blank" rel="noopener noreferrer">Personal portfolio ↗</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="contact-panel reveal">
+            <div><p class="eyebrow">06 / Connect</p><h2>Good partnerships begin with a conversation.</h2><p>For thoughtful conversations about the AZ Group vision, potential collaborations or the work behind it, reach out through the links here.</p></div>
+            <div class="contact-links"><a href="mailto:arpitpareek79@gmail.com"><span>Email</span><span>↗</span></a><a href="https://www.linkedin.com/in/arpit-pareek-83b533361/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>↗</span></a><a href="https://github.com/arpitprk89" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>↗</span></a><a href="https://arpitszone.netlify.app/" target="_blank" rel="noopener noreferrer"><span>Arpit’s Zone</span><span>↗</span></a></div>
+          </div>
+          <div class="brand-family reveal"><p><strong style="color:#f5f5f2;font-weight:600">A vision led by Arpit Pareek.</strong><br>AZ Group is being shaped as a long-term venture concept. The site uses illustrative architectural and founder-themed visuals to communicate the direction; they are not claims of current operations.</p><img src="arpits-zone-logo.png" alt="Arpit’s Zone — Design, Develop, Inspire" width="400" height="240" loading="lazy"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><div><strong>AZ GROUP</strong> &nbsp; © <span id="year">2026</span> Arpit Pareek</div><div class="footer-links"><a href="#vision">Vision</a><a href="#ventures">Ventures</a><a href="#founder">Founder</a><a href="#top">Back to top ↑</a></div></div></footer>
+  </div>
+  <script>
+    (() => {
+      const intro = document.getElementById('intro');
+      const enter = document.getElementById('enter-az');
+      const site = document.getElementById('site');
+      const menuButton = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+      let opened = false;
+
+      function enterSite() {
+        if (opened) return;
+        opened = true;
+        site.inert = false;
+        document.body.classList.remove('locked');
+        site.classList.add('is-visible');
+        intro.classList.add('is-leaving');
+        window.setTimeout(() => { intro.remove(); }, 760);
+      }
+      enter.addEventListener('click', enterSite);
+      document.addEventListener('keydown', (event) => {
+        if (!opened && (event.key === 'Enter' || event.key === ' ')) {
+          if (document.activeElement === enter) { event.preventDefault(); enterSite(); }
+        }
+      });
+      menuButton.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.textContent = open ? 'CLOSE −' : 'MENU +';
+      });
+      navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = 'MENU +';
+      }));
+      const year = document.getElementById('year');
+      if (year) year.textContent = String(new Date().getFullYear());
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add('is-in'); observer.unobserve(entry.target); }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+      } else {
+        document.querySelectorAll('.reveal').forEach((item) => item.classList.add('is-in'));
+      }
+    })();
+  </script>
+</body>
+</html>
